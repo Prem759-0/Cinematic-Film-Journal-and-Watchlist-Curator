@@ -21,6 +21,13 @@ export interface ToastMessage {
   type: ToastType;
 }
 
+// Added the missing ToastContextType here
+export interface ToastContextType {
+  toasts: ToastMessage[];
+  addToast: (message: string, type?: ToastType) => void;
+  removeToast: (id: string) => void;
+}
+
 export interface FilmStats {
   totalFilms: number;
   totalWatched: number;
